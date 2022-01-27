@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="{% static 'css/Login.css' %}">
+</head>
+<body>
+
+    <form method="POST" action="" id="form">
+        {% csrf_token %}
+
+        <h2>{{ pattern }}</h2>
+
+        <label for="username" class="labeluser">Username:</label>
+        <input type="text" name="username" id="username"> <br><br>
+
+        <label for="passfield" class="labeluser">Password:</label>
+        <input type="password" id="passfield" name="password"> <br><br>
+
+        <button type="button" value= '{{ buttononevalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttonone }}</button>
+        <button type="button" value= '{{ buttontwovalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttontwo }}</button>
+        <button type="button" value= '{{ buttonthreevalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttonthree }}</button>
+        <button type="button" value= '{{ buttonfourvalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttonfour }}</button>
+
+        <br>
+        <button type="button" value= '{{ buttonfivevalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttonfive }}</button>
+        <button type="button" value= '{{ buttonsixvalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttonsix }}</button>
+        <button type="button" value= '{{ buttonsevenvalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttonseven }}</button>
+        <button type="button" value= '{{ buttoneightvalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttoneight }}</button>
+        <br>
+        <button type="button" value= '{{ buttonninevalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttonnine }}</button>
+        <button type="button" value= '{{ buttontenvalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttonten }}</button>
+        <button type="button" value= '{{ buttonelevenvalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttoneleven }}</button>
+        <button type="button" value= '{{ buttontwelvevalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttontwelve }}</button>
+        <br>
+        <button type="button" value= '{{ buttonthirteenvalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttonthirteen }}</button>
+        <button type="button" value= '{{ buttonfourteenvalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttonfourteen }}</button>
+        <button type="button" value= '{{ buttonfifteenvalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttonfifteen }}</button>
+        <button type="button" value= '{{ buttonsixteenvalue }}' name="pass" onclick = "add(this.value)" class="passwordbutton">{{ displayvaluebuttonsixteen }}</button>
+
+        <br><br>
+
+        <input type="submit" value="submit" name="save">
+    </form>
+
+    <script>
+        function add(buttonValue){
+            currentvalue = document.getElementById('passfield').value;
+            updatedValue = currentvalue + buttonValue;
+            document.getElementById('passfield').value = updatedValue;
+        }
+    </script>
+
+</body>
+</html>
